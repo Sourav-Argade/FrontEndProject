@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calculator</h2>
+
+<p id="Calculation"></p>
+
+<script>
+let a = parseInt(window.prompt("Enter First Number:"));
+let b = parseInt(window.prompt("Enter Second Number:"));
+let input = parseInt(window.prompt("Enter your choice \n 1)Addition  \n 2)Substraction \n 3) Multiplication \n 4) Division \n5) Squaring \n 6) Remainder:"));
+switch (input) {
+  case 1:
+    c=a+b;
+    break;
+  case 2:
+    c=a-b;
+    break;
+  case 3:
+   c=a*b;
+    break;
+  case 4:
+    c=a/b;
+    break;
+  case 5:
+   c=a**b;
+    break;
+  case 6:
+    c=a%b;
+    break;
+  default:
+	window.prompt("Invalid Input");
+	break;
+}
+document.getElementById("Calculation").innerHTML = "Result is " + c;
+</script>
+
+</body>
+</html>

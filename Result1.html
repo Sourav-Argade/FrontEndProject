@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Results1</title>
+	</head>
+<body>
+		<p id="Form"> </p>
+		<form>
+			<input type="number" id="Subject1" value="subject0" /><br>
+			<input type="number" id="Subject2" value="subject1" /><br>
+			<input type="number" id="Subject3" value="subject2" /><br>
+			<input type="number" id="Subject4" value="subject3" /><br>
+			<input type="number" id="Subject5" value="subject4" /><br>
+			<button type="button" name="btn" value="button" onclick="Result()">Submit </button>
+		</form>
+		<br>
+		
+		<p id="demo"> </p>
+		<script>
+			var sum=0;
+			function Result() {
+			const input= new Array(6);
+			for(let i=0;i<=4;i++){
+				input[i] = document.getElementById("Subject1");
+			}
+			for(let i=0;i<=4;i++)
+			{
+			sum = input[i];
+			}
+			 document.getElementById("demo").innerHTML = sum;
+			}
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Biggest Among Three Numbers</h2>
+
+<p id="p1" style="color:red;background-color:black"></p>
+
+<script>
+let a = parseInt(window.prompt("Enter First Number:"));
+let b = parseInt(window.prompt("Enter Second Number:"));
+let c = parseInt(window.prompt("Enter Third Number:"));
+
+if((a>b) && (a>c))
+{
+	document.getElementById("p1").innerHTML = a;
+}
+else if((b>a) && (b>c))
+{
+    document.getElementById("p1").innerHTML = b;
+}
+else
+{
+	document.getElementById("p1").innerHTML = c;
+}
+</script>
+
+</body>
+</html>

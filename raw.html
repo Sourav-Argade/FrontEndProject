@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+Enter Password : <input type="password" id="pass" onkeydown="add()" value="" >
+<button onclick="sub()">Enter</button>
+Show Password: <input type="checkbox" onclick="showpass()" id="chk" value="0" >
+<p id="demo3"></p>
+<br><br><b>Note:</b> Your password should contain at least one lowercase, at least one uppercase, one number and one symbol(!, @, #, $, %, &)
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+document.getElementById("demo3").style.visibility='hidden';
+
+function showpass(){
+var p= document.getElementById("chk").value;
+if(p==0){
+document.getElementById("demo3").style.visibility='visible';
+document.getElementById("chk").value=1;
+}else{
+document.getElementById("demo3").style.visibility='hidden';
+document.getElementById("chk").value=0;}
+}
+var m="";
+
+function add(){
+var k=event.key;
+
+var l=event. keyCode || event. charCode;
+
+	if(l==8||l==46)
+	{
+	m=m.substring(0,m.length-1)
+	document.getElementById("demo3").innerHTML=m;
+	}else{
+	
+	m=m+k;
+	
+	document.getElementById("demo3").innerHTML=m;
+	
+	}
+	
+    /document.getElementById("demo3").style.visibility='hidden';/
+	}
+
+function sub(){
+let text = document.getElementById("pass").value;
+const pattern1 =/[a-z]+/;
+const pattern2 =/[A-Z]+/;
+const pattern3 =/[0-9]+/;
+const pattern4 =/[!|@|#|$|%|&]/;
+let a = pattern1.test(text);
+let b = pattern2.test(text);
+let c = pattern3.test(text);
+let d = pattern4.test(text);
+
+if(a==true && b==true && c==true && d==true){
+document.getElementById("demo4").innerHTML = "Strong Password";
+document.getElementById("demo4").style.color="#00cc44";
+}else{
+window.alert("Invalid Password !!!");
+/*document.getElementById("demo4").innerHTML = "Invalid Password";
+document.getElementById("demo4").style.color="red"; */
+}
+document.getElementById("pass").value = "";
+}
+</script>
+</body>
+</html>

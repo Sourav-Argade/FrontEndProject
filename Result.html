@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Results</title>
+	</head>
+<body>
+<center>
+	<h1>Check out your Result</h1>
+	<h3><i>Enter your marks</i></h3>
+		<p id="Form"> </p>
+		
+			Subject 1 :<input type="text" id="Subject1" Name="s1" /><br>
+			Subject 2 :<input type="text" id="Subject2" Name="s2" /><br>
+			Subject 3 :<input type="text" id="Subject3" Name="s3" /><br>
+			Subject 4 :<input type="text" id="Subject4" Name="s4" /><br>
+			Subject 5 :<input type="text" id="Subject5" Name="s5" /><br>
+			<hr><button type="button" name="button" onclick="Result()">
+			Submit </button>
+	
+		<br>
+		</center>
+		<p id="Main"> </p>
+			<script>
+			var s="The sum is";
+			function Result() {
+			/*var input = document.getElementsByName('s1');
+			 N = parseInt(N);
+				for(var i=0;i<input;i++){
+					s += subject[i];
+					document.write("Number you chose: " + subject[i] + "<br />");*/
+					var tot = parseInt(document.getElementById("Subject1").value)+
+					parseInt(document.getElementById("Subject2").value)+
+					parseInt(document.getElementById("Subject3").value)+
+					parseInt(document.getElementById("Subject4").value)+
+					parseInt(document.getElementById("Subject5").value);
+					
+		
+				
+					if(tot<250){
+						document.write("Your grade is F with marks" +tot);
+						break;
+					}else if(250<=tot<=299){
+						document.write("You passed with E grade with marks" +tot);
+						break;
+					}else if(300<=tot<=349){
+						document.write("You passed with D grade with marks" +tot);
+						break;
+					}else if(350<=tot<=399){
+						document.write("You passed with C grade with marks" +tot);
+						break;
+					}else if(400<=tot<=449){
+						document.write("You passed with B grade with marks" +tot);
+						break;
+					}else if(450<=tot<=500){
+						document.write(" Congratulations You passed with A grade with marks" +tot);
+						break;
+					}
+					else{
+						document.write("Invalid Input");
+					}
+			}
+			
+		</script>
+
+</body>
+</html>

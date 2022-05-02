@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Months</h2>
+
+<p id="Month"></p>
+
+<script>
+
+let input = window.prompt("Enter your choice");
+switch (input) {
+  case 1:
+    c=Monday;
+    break;
+  case 2:
+    c=Tuesday;
+    break;
+  case 3:
+   c=Wednesday;
+    break;
+  case 4:
+    c=Thursday;
+    break;
+  case 5:
+   c=Friday;
+    break;
+  case 6:
+    c=Saturday;
+    break;
+  case 6:
+    c=Sunday;
+    break;
+  default:
+	window.prompt("Invalid Input");
+	break;
+}
+document.getElementById("Month").innerHTML = "Month is " + c;
+</script>
+
+</body>
+</html>

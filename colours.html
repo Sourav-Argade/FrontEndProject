@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Colours</h1>
+
+
+<p id="demo"></p>
+
+<script>
+ {
+  let color = window.prompt("Enter number of colours you wish to Enter");
+  document.write("Total entered colours are " +color);
+
+    let arr = [" "];
+    for(let i=0;i<=color-1;i++){
+    arr[i] = window.prompt("Enter the colours");
+    }
+    document.write("\n The colours in the list are \n");
+    document.write(arr);
+    
+    var c = window.prompt("choose the colour you want to search for");
+    for(var i=0;i<=color;i++)
+    
+    {
+    if(c==arr[i]){
+    document.getElementById("demo").innerHTML="The colour is present in the List "+ c + "<br>";
+   }
+    else {(i==color-1)
+    document.getElementById("demo").innerHTML="The colour is not present in the List " + "<br>" ;
+    }
+    }
+  
+  
+}
+</script>
+
+</body>
+</html>
